@@ -1,3 +1,3 @@
 <?php
-  include("views/indexView.php")
+  require("controllers/indexControllers.php")
  ?>

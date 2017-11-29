@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Library</title>
-    <meta name="description" content="Creation of an application of management of vehicle">
+    <meta name="description" content="Application that allows a librarian to manage his book catalog as well as loans and returns.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -17,3 +17,11 @@
   </head>
 
   <body>
+
+    <!-- start of the header -->
+        <header>
+          <div class="jumbotron">
+            <h1 class="display-3">Library</h1>
+          </div>
+       </header>
+     <!-- end of the header -->
