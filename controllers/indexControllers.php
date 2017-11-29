@@ -1,7 +1,7 @@
 <?php
 
 require("model/connexion.php");
-require("model/Manager.php");
+require("model/ManagerBook.php");
 
 // load all class
 function loadClass($class)
