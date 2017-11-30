@@ -1,5 +1,5 @@
 <?php
-  include("template/header.php")
+  require("template/header.php");
  ?>
 
 
@@ -13,15 +13,15 @@
        <input type="text" class="form-control" id="formGroupExampleInput1" name="author" placeholder="author">
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput1" name="description" placeholder="description">
+       <input type="text" class="form-control" id="formGroupExampleInput2" name="description" placeholder="description">
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput1" name="release_date" placeholder="release_date">
+       <input type="text" class="form-control" id="formGroupExampleInput2" name="releaseDate" placeholder="releaseDate">
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput1" name="category" placeholder="category">
+       <input type="text" class="form-control" id="formGroupExampleInput4" name="category" placeholder="category">
      </div>
-     <button type="submit" value="Submit" name="addAccount" class="btn btn-primary submi">Submit</button>
+     <button type="submit" value="Submit" name="addBook" class="btn btn-primary submi">Submit</button>
    </form>
  </div>
  <!-- end of the div class formu for add account-->
@@ -40,8 +40,9 @@
                   <h3 class="card-title"><?php echo $value->getTitle(); ?></h3>
                   <p class="card-text"><?php echo $value->getAuthor(); ?></p>
                   <p class="card-text"><?php echo $value->getDescription(); ?></p>
-                  <p class="card-text"><?php echo $value->getRelease_date(); ?></p>
+                  <p class="card-text"><?php echo $value->getReleaseDate(); ?></p>
                   <p class="card-text"><?php echo $value->getCategory(); ?></p>
+                  <a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a>
                   <a href="update.php?id=<?php echo $value->getId();?>">update</a>
                   </div>
                 </div>
@@ -56,5 +57,4 @@
     <!-- end of the div class block -->
 
  <?php
-   include("template/footer.php")
-  ?>
+   require("template/footer.php");

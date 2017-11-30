@@ -4,7 +4,7 @@ class ManagerBook{
 
   protected $bdd;
 
-  public function__construct($bdd)
+  public function __construct($bdd)
   {
     $this->setBdd($bdd);
   }
@@ -18,14 +18,16 @@ class ManagerBook{
   // Execute INSERT in the database
   public function add($book)
   {
-    $q = $this->bdd->prepare('INSERT INTO book(title, author, description, release_date, category) VALUES(:title, :author, :description, :release_date, :category)')
+
+  $q = $this->bdd->prepare('INSERT INTO book(title, author, description, releaseDate, category) VALUES(:title, :author, :description, :releaseDate, :category)');
   $q->bindValue(':title', $book->getTitle());
   $q->bindValue(':author', $book->getAuthor());
   $q->bindValue(':description', $book->getDescription());
-  $q->bindValue(':release_date', $book->getRelease_date());
-  $q->bindValue(':category', $book->getcategory());
+  $q->bindValue(':releaseDate', $book->getReleaseDate());
+  $q->bindValue(':category', $book->getCategory());
   $q->execute();
   }
+
 
   // Execute a SELECT request in database where id
   public function get($id)
@@ -52,16 +54,22 @@ class ManagerBook{
 
 
   // Execute a UPDATE request database
-  public function getUpdate($ook)
+  public function getUpdate($book)
     {
-      $q = $this->bdd->prepare ('UPDATE book SET title= :title, author= :author, description= :description, release_date= :release_date, category:category WHERE id = :id');
+      $q = $this->bdd->prepare ('UPDATE book SET title= :title, author= :author, description= :description, releaseDate= :releaseDate, category:category WHERE id = :id');
       $q->bindValue(':id', $book->getId());
       $q->bindValue(':title', $book->getTitle());
       $q->bindValue(':author', $book->getAuthor());
       $q->bindValue(':description', $book->getDescription());
-      $q->bindValue(':release_date', $book->getRelease_date());
+      $q->bindValue(':releaseDate', $book->getReleaseDate());
       $q->bindValue(':category', $book->getCategory());
       $q->execute();
      }
 
+  //  Execute a DELETE request
+  public function delete($supprim)
+ {
+     $req = $this->bdd->exec('DELETE FROM book WHERE id = '.$supprim);
+     header("Location: index.php");
+  }
 }

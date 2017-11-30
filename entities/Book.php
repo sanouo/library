@@ -1,18 +1,20 @@
 <?php
 
 // class Account
-class book {
+class Book {
   protected $id;
   protected $title;
   protected $author;
   protected $description;
-  protected $release_date;
+  protected $releaseDate;
   protected $category;
 
 // function construct
   public function __construct(array $data){
     $this->hydrate($data);
   }
+
+
   // function hydrate
   public function hydrate(array $data)
   {
@@ -22,6 +24,7 @@ class book {
       $this->$method($value);
       }
     }
+  }
 
   // getters
     public function getId()
@@ -46,7 +49,7 @@ class book {
 
     public function getReleaseDate()
     {
-        return $this->release_date;
+        return $this->releaseDate;
     }
 
     public function getCategory()
@@ -58,15 +61,17 @@ class book {
 // setters
     public function setId($id)
     {
-        $this->id = $id;
-        return $this;
+       $this->id = $id;
+       return $this;
     }
+
 
     public function setTitle($title)
     {
-        $this->title = $title;
-        return $this;
+          $this->title = $title;
+          return $this;
     }
+
 
     public function setAuthor($author)
     {
@@ -74,17 +79,20 @@ class book {
         return $this;
     }
 
+
     public function setDescription($description)
     {
         $this->description = $description;
         return $this;
     }
 
-    public function setReleaseDate($release_date)
+
+    public function setReleaseDate($releaseDate)
     {
-        $this->release_date = $release_date;
+        $this->releaseDate = $releaseDate;
         return $this;
     }
+
 
     public function setCategory($category)
     {
