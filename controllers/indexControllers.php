@@ -34,4 +34,11 @@ if(isset($_GET['supprim']))
   $donnees= $manager->delete($_GET['supprim']);
 }
 
+
+
+
+
+
+
+
 require("views/indexView.php");

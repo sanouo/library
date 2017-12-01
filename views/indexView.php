@@ -43,7 +43,7 @@
                   <p class="card-text"><?php echo $value->getReleaseDate(); ?></p>
                   <p class="card-text"><?php echo $value->getCategory(); ?></p>
                   <a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a>
-                  <a href="update.php?id=<?php echo $value->getId();?>">update</a>
+                  <a href="views/descriptionView.php?id=<?php echo $value->getId();?>">update</a>
                   </div>
                 </div>
         </div>
