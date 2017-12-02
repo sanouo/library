@@ -8,6 +8,7 @@ class Book {
   protected $description;
   protected $releaseDate;
   protected $category;
+  protected $available;
 
 // function construct
   public function __construct(array $data){
@@ -57,6 +58,10 @@ class Book {
         return $this->category;
     }
 
+    public function getAvailable()
+    {
+        return $this->available;
+    }
 
 // setters
     public function setId($id)
@@ -100,4 +105,9 @@ class Book {
         return $this;
     }
 
+    public function setAvailable($available)
+    {
+        $this->available = $available;
+        return $this;
+    }
 }

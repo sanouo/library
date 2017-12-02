@@ -4,7 +4,7 @@
 class User {
   protected $id;
   protected $name;
-  protected $adress;
+  protected $address;
   protected $city;
 
 
@@ -36,9 +36,9 @@ class User {
         return $this->name;
     }
 
-    public function getAdress()
+    public function getAddress()
     {
-        return $this->adress;
+        return $this->address;
     }
 
     public function getCity()
@@ -62,9 +62,9 @@ class User {
     }
 
 
-    public function setAdress($adress)
+    public function setAddress($address)
     {
-        $this->adress = $adress;
+        $this->address = $address;
         return $this;
     }
 

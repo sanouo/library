@@ -21,6 +21,9 @@
      <div class="form-group">
        <input type="text" class="form-control" id="formGroupExampleInput4" name="category" placeholder="category">
      </div>
+     <div class="form-group">
+       <input type="text" class="form-control" id="formGroupExampleInput5" name="available" placeholder="available">
+     </div>
      <button type="submit" value="Submit" name="addBook" class="btn btn-primary submi">Submit</button>
    </form>
  </div>
@@ -42,8 +45,10 @@
                   <p class="card-text"><?php echo $value->getDescription(); ?></p>
                   <p class="card-text"><?php echo $value->getReleaseDate(); ?></p>
                   <p class="card-text"><?php echo $value->getCategory(); ?></p>
+                  <p class="card-text"><?php echo $value->getAvailable(); ?></p>
                   <a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a>
-                  <a href="views/descriptionView.php?id=<?php echo $value->getId();?>">update</a>
+                  <a href="detail.php?id=<?php echo $value->getId();?>">detail</a>
+
                   </div>
                 </div>
         </div>
@@ -55,6 +60,50 @@
 
   </div>
     <!-- end of the div class block -->
+
+<!--
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>author</th>
+          <th>description</th>
+          <th>releaseDate</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+
+    <?php foreach ($donnees as $key => $value){
+      ?>
+
+      <tbody>
+        <tr>
+          <td><?php echo $value->getTitle(); ?></td>
+          <td><?php echo $value->getAuthor(); ?></td>
+          <td><?php echo $value->getDescription(); ?></td>
+          <td><?php echo $value->getReleaseDate(); ?></td>
+          <td><?php echo $value->getCategory(); ?></td>
+          <td><a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a></td>
+          <td><a href="views/descriptionView.php?id=<?php echo $value->getId();?>">info</a></td>
+
+
+
+
+        </tr>
+
+      </tbody>
+
+
+    <?php
+      }
+    ?>
+
+  </table> -->
+
+
+
+<a href="user.php"><button type="button"  class="btn btn-primary">User</button></a>
 
  <?php
    require("template/footer.php");

@@ -19,12 +19,13 @@ class ManagerBook{
   public function add($book)
   {
 
-  $q = $this->bdd->prepare('INSERT INTO book(title, author, description, releaseDate, category) VALUES(:title, :author, :description, :releaseDate, :category)');
+  $q = $this->bdd->prepare('INSERT INTO book(title, author, description, releaseDate, category, available) VALUES(:title, :author, :description, :releaseDate, :category, :available)');
   $q->bindValue(':title', $book->getTitle());
   $q->bindValue(':author', $book->getAuthor());
   $q->bindValue(':description', $book->getDescription());
   $q->bindValue(':releaseDate', $book->getReleaseDate());
   $q->bindValue(':category', $book->getCategory());
+  $q->bindValue(':available', $book->getAvailable());
   $q->execute();
   }
 
@@ -56,13 +57,14 @@ class ManagerBook{
   // Execute a UPDATE request database
   public function getUpdate($book)
     {
-      $q = $this->bdd->prepare ('UPDATE book SET title= :title, author= :author, description= :description, releaseDate= :releaseDate, category:category WHERE id = :id');
+      $q = $this->bdd->prepare ('UPDATE book SET title= :title, author= :author, description= :description, releaseDate= :releaseDate, category:category, available:available WHERE id = :id');
       $q->bindValue(':id', $book->getId());
       $q->bindValue(':title', $book->getTitle());
       $q->bindValue(':author', $book->getAuthor());
       $q->bindValue(':description', $book->getDescription());
       $q->bindValue(':releaseDate', $book->getReleaseDate());
       $q->bindValue(':category', $book->getCategory());
+      $q->bindValue(':available', $book->getAvailable());
       $q->execute();
      }
 
