@@ -47,7 +47,8 @@
                   <p class="card-text"><?php echo $value->getCategory(); ?></p>
                   <p class="card-text"><?php echo $value->getAvailable(); ?></p>
                   <a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a>
-                  <a href="views/descriptionView.php?id=<?php echo $value->getId();?>">update</a>
+                  <a href="detail.php?id=<?php echo $value->getId();?>">detail</a>
+
                   </div>
                 </div>
         </div>
