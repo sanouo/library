@@ -74,22 +74,31 @@ class Book {
 
     public function setTitle($title)
     {
-          $this->title = $title;
-          return $this;
+      if (is_string($title))
+      {
+        $this->title = htmlspecialchars($title);
+        return $this;
+      }
     }
 
 
     public function setAuthor($author)
     {
-        $this->author = $author;
+      if (is_string($author))
+      {
+        $this->author = htmlspecialchars($author);
         return $this;
+      }
     }
 
 
     public function setDescription($description)
     {
-        $this->description = $description;
+      if (is_string($description))
+      {
+        $this->description = htmlspecialchars($description);
         return $this;
+      }
     }
 
 
@@ -105,6 +114,7 @@ class Book {
         $this->category = $category;
         return $this;
     }
+
 
     public function setAvailable($available)
     {
