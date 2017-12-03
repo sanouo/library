@@ -3,7 +3,7 @@
  ?>
 
 
- <!-- start of the div class formu for add account-->
+ <!-- start of the div class formu for add book-->
  <div class="formu col-12 col-md-8 col-lg-6">
   <form action="index.php" method="post">
      <div class="form-group">
@@ -16,18 +16,51 @@
        <input type="text" class="form-control" id="formGroupExampleInput2" name="description" placeholder="description">
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput2" name="releaseDate" placeholder="releaseDate">
+       <input type="text" class="form-control" id="formGroupExampleInput3" name="releaseDate" placeholder="releaseDate">
      </div>
+
+    <div class="form-group">
+    <select class="custom-select" name="category">
+    <option selected>category</option>
+    <option value="novel">novel</option>
+    <option value="fantastic">fantastic</option>
+    <option value="adventure">adventure</option>
+    <option value="fantastique">action</option>
+    </select>
+    </div>
+
      <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput4" name="category" placeholder="category">
+     <select class="custom-select" name="available">
+     <option selected>available</option>
+     <option value="yes">yes</option>
+     <option value="no">no</option>
+     </select>
      </div>
-     <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput5" name="available" placeholder="available">
-     </div>
+
      <button type="submit" value="Submit" name="addBook" class="btn btn-primary submi">Submit</button>
    </form>
  </div>
- <!-- end of the div class formu for add account-->
+ <!-- end of the div class formu for add book-->
+
+<br>
+
+<!-- start div class sort -->
+ <div class="formu col-12 col-md-8 col-lg-6 sort">
+  <form action="index.php" method="post">
+     <div class="form-group">
+ <select class="custom-select" name="start">
+   <option selected>Open this select menu</option>
+   <option value="roman">roman</option>
+   <option value="fantastique">fantastique</option>
+   <option value="aventure">aventure</option>
+ </select>
+</div>
+<input type="submit" name="search" value="search">
+<!-- <button type="submit" value="Submit" name="addAvailable" class="btn btn-primary submi">change</button> -->
+</form>
+</div>
+<!-- end div class sort -->
+
 
 
   <!-- start of the div class block -->
@@ -61,49 +94,10 @@
   </div>
     <!-- end of the div class block -->
 
-<!--
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>title</th>
-          <th>author</th>
-          <th>description</th>
-          <th>releaseDate</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-
-    <?php foreach ($donnees as $key => $value){
-      ?>
-
-      <tbody>
-        <tr>
-          <td><?php echo $value->getTitle(); ?></td>
-          <td><?php echo $value->getAuthor(); ?></td>
-          <td><?php echo $value->getDescription(); ?></td>
-          <td><?php echo $value->getReleaseDate(); ?></td>
-          <td><?php echo $value->getCategory(); ?></td>
-          <td><a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a></td>
-          <td><a href="views/descriptionView.php?id=<?php echo $value->getId();?>">info</a></td>
-
-
-
-
-        </tr>
-
-      </tbody>
-
-
-    <?php
-      }
-    ?>
-
-  </table> -->
-
-
-
+<div class="user">
 <a href="user.php"><button type="button"  class="btn btn-primary">User</button></a>
+</div>
+
 
  <?php
    require("template/footer.php");

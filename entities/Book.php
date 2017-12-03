@@ -1,6 +1,6 @@
 <?php
 
-// class Account
+// class Book
 class Book {
   protected $id;
   protected $title;
@@ -9,6 +9,7 @@ class Book {
   protected $releaseDate;
   protected $category;
   protected $available;
+
 
 // function construct
   public function __construct(array $data){

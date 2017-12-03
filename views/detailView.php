@@ -27,6 +27,12 @@
   </div>
     <!-- end of the div class block -->
 
+    <!-- start div class home -->
+    <div class="home">
+      <a href="index.php"><button type="button"  class="btn btn-primary">Home</button></a>
+    </div>
+    <!-- end div class home -->
+
 
     <?php
       require("template/footer.php");

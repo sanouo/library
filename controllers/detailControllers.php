@@ -15,6 +15,9 @@ spl_autoload_register("loadClass");
 // create object $manager
 $manager = new ManagerBook($bdd);
 
+
+// call function get for select elements where id
 $detail = $manager->get($_GET['id']);
+
 
 require("views/detailView.php");

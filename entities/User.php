@@ -1,6 +1,6 @@
 <?php
 
-// class Account
+// class User
 class User {
   protected $id;
   protected $name;
