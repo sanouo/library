@@ -16,7 +16,7 @@
        <input type="text" class="form-control" id="formGroupExampleInput2" name="description" placeholder="description">
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" id="formGroupExampleInput3" name="releaseDate" placeholder="releaseDate">
+       <input type="text" class="form-control" id="formGroupExampleInput3" name="releaseDate" placeholder="2017-12-1">
      </div>
 
     <div class="form-group">
