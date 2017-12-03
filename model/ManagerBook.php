@@ -4,6 +4,7 @@ class ManagerBook{
 
   protected $bdd;
 
+
   public function __construct($bdd)
   {
     $this->setBdd($bdd);
@@ -18,7 +19,6 @@ class ManagerBook{
   // Execute INSERT in the database
   public function add($book)
   {
-
   $q = $this->bdd->prepare('INSERT INTO book(title, author, description, releaseDate, category, available) VALUES(:title, :author, :description, :releaseDate, :category, :available)');
   $q->bindValue(':title', $book->getTitle());
   $q->bindValue(':author', $book->getAuthor());
@@ -40,7 +40,7 @@ class ManagerBook{
   }
 
 
-  // Execute a SELECT request database
+  // Execute a SELECT all request database
   public function getBooks()
     {
       $req = $this->bdd->prepare('SELECT * FROM book');
@@ -52,6 +52,33 @@ class ManagerBook{
       }
       return $donnees;
     }
+
+
+
+
+    // public function try($category)
+    //   {
+    //     $category = (string) $category;
+    //     $q = $this->bdd->query('SELECT * FROM book WHERE category = '.$category);
+    //     $donnees = $q->fetch(PDO::FETCH_ASSOC);
+    //     return new Book($donnees);
+    //
+    //   }
+    // Execute a SELECT request database where category
+    public function try()
+      {
+
+        $req = $this->bdd->prepare('SELECT * FROM book WHERE category = '.$start);
+        $req->execute(array(
+          ':start' => $start
+        ));
+        $donnees = $req->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($donnees as $key => $value)
+        {
+          $donnees[$key] = new Book($value);
+        }
+        return $donnees;
+      }
 
 
   // Execute a UPDATE request database
@@ -67,6 +94,7 @@ class ManagerBook{
       $q->bindValue(':available', $book->getAvailable());
       $q->execute();
      }
+
 
   //  Execute a DELETE request
   public function delete($supprim)
