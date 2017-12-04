@@ -2,6 +2,7 @@
   require("template/header.php");
  ?>
 
+
   <!-- start of the div class block -->
  <div class="block">
 
@@ -14,7 +15,7 @@
                   <p class="card-text"><?php echo $detail->getDescription(); ?></p>
                   <p class="card-text"><?php echo $detail->getReleaseDate(); ?></p>
                   <p class="card-text"><?php echo $detail->getCategory(); ?></p>
-                  <p class="card-text"><?php echo $detail->getAvailable(); ?></p>
+                  <p class="card-text">available : <?php echo $detail->getAvailable(); ?></p>
                   <a href="index.php?supprim=<?php echo $detail->getId();?>"><i class="material-icons">delete</i></a>
                   <a href="views/detailView.php?id=<?php echo $detail->getId();?>">detail</a>
 
