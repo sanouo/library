@@ -7,6 +7,7 @@
     <table class="table">
       <thead>
         <tr>
+          <th>Id</th>
           <th>Name</th>
           <th>address</th>
           <th>City</th>
@@ -18,6 +19,7 @@
 
       <tbody>
         <tr>
+          <td><?php echo $value->getId(); ?></td>          
           <td><?php echo $value->getName(); ?></td>
           <td><?php echo $value->getAddress(); ?></td>
           <td><?php echo $value->getCity(); ?></td>

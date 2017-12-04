@@ -57,31 +57,22 @@ class User {
 
     public function setName($name)
     {
-      if (is_string($name))
-      {
-          $this->name = htmlspecialchars($name);
+          $this->name = $name;
           return $this;
-      }
     }
 
 
     public function setAddress($address)
     {
-      if (is_string($address))
-      {
-        $this->address = htmlspecialchars($address);
+        $this->address = $address;
         return $this;
-      }
     }
 
 
     public function setCity($city)
     {
-      if (is_string($city))
-      {
-        $this->city = htmlspecialchars($city);
+        $this->city = $city;
         return $this;
-      }
     }
 
 
