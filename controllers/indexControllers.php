@@ -40,7 +40,6 @@ if(isset($_GET['supprim']))
 if(isset($_POST['search']))
 {
   $donnees = $manager->try($_POST['sort']);
-var_dump($_POST);
 }
 
 

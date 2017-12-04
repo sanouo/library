@@ -78,7 +78,7 @@
                   <p class="card-text"><?php echo $value->getDescription(); ?></p>
                   <p class="card-text"><?php echo $value->getReleaseDate(); ?></p>
                   <p class="card-text"><?php echo $value->getCategory(); ?></p>
-                  <p class="card-text"><?php echo $value->getAvailable(); ?></p>
+                  <p class="card-text">available : <?php echo $value->getAvailable(); ?></p>
                   <a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a>
                   <a href="detail.php?id=<?php echo $value->getId();?>">detail</a>
 
