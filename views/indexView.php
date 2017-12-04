@@ -48,15 +48,15 @@
  <div class="formu col-12 col-md-8 col-lg-6 sort">
   <form action="index.php" method="post">
      <div class="form-group">
- <select class="custom-select" name="start">
+ <select class="custom-select" name="sort">
    <option selected>Open this select menu</option>
-   <option value="roman">roman</option>
-   <option value="fantastique">fantastique</option>
-   <option value="aventure">aventure</option>
+   <option value="novel">novel</option>
+   <option value="fantastic">fantastic</option>
+   <option value="adventure">adventure</option>
+   <option value="action">action</option>
  </select>
 </div>
 <input type="submit" name="search" value="search">
-<!-- <button type="submit" value="Submit" name="addAvailable" class="btn btn-primary submi">change</button> -->
 </form>
 </div>
 <!-- end div class sort -->

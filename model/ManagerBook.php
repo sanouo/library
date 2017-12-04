@@ -65,14 +65,14 @@ class ManagerBook{
     //
     //   }
     // Execute a SELECT request database where category
-    public function try()
+    public function try($sort)
       {
 
-        $req = $this->bdd->prepare('SELECT * FROM book WHERE category = '.$start);
-        $req->execute(array(
-          ':start' => $start
-        ));
+        $req = $this->bdd->prepare('SELECT * FROM book WHERE category = :sort');
+          $req->bindValue(':sort', $sort);
+        $req->execute();
         $donnees = $req->fetchAll(PDO::FETCH_ASSOC);
+
         foreach ($donnees as $key => $value)
         {
           $donnees[$key] = new Book($value);

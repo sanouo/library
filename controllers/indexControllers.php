@@ -39,13 +39,8 @@ if(isset($_GET['supprim']))
 // call function for select to sort items by category
 if(isset($_POST['search']))
 {
-  // $donnees = new Book($_POST);
-  //
-  //  $manager->try($donnees);
-  // $start = $_POST['start'];
-  // $donnees = $manager->try();
-
-  $start = $manager->try($_GET['start']);
+  $donnees = $manager->try($_POST['sort']);
+var_dump($_POST);
 }
 
 
