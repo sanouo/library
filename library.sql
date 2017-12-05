@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Dim 03 Décembre 2017 à 16:13
+-- Généré le :  Mar 05 Décembre 2017 à 10:25
 -- Version du serveur :  5.7.20-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.22-0ubuntu0.16.04.1
 
@@ -43,7 +43,8 @@ CREATE TABLE `book` (
 INSERT INTO `book` (`id`, `title`, `author`, `description`, `releaseDate`, `category`, `available`) VALUES
 (19, 'athletisme', 'jean', 'l histoire de l athletisme', '2017-02-01', 'adventure', 'yes'),
 (20, 'bank', 'chris', 'action et suspense', '2018-02-01', 'novel', 'no'),
-(22, 'histoire', 'zola', 'tres bien', '2017-02-01', 'novel', 'yes');
+(22, 'histoire', 'zola', 'tres bien', '2017-02-01', 'novel', 'yes'),
+(44, 'animaux', 'guy', 'tout sur la nature', '2004-02-01', 'fantastic', 'yes');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
