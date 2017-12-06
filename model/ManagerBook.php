@@ -76,6 +76,7 @@ class ManagerBook{
   public function getUpdate($book)
     {
       $q = $this->bdd->prepare ('UPDATE book SET available = :available WHERE id = :id');
+      $q->bindValue(':id', $book->getId());
       $q->bindValue(':available', $book->getAvailable());
       $q->execute();
      }
