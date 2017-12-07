@@ -24,18 +24,19 @@ if (isset($_POST['addBook']))
   $manager->add($donnees);
 }
 
+
+// call function for update object
 if (isset($_POST['submitUpdate'])){
-  // retrieve the object from the ID
 
   $update = $manager->get($_POST['id']);
 
   if(isset($_POST['available'])){
     $update-> setAvailable($_POST['available']);
-
   }
-  // update object
   $manager->getUpdate($update);
 }
+
+
 
 // call function getBooks for select all elements
 $donnees = $manager->getBooks();
@@ -53,9 +54,6 @@ if(isset($_POST['search']))
 {
   $donnees = $manager->try($_POST['sort']);
 }
-
-
-
 
 
 require("views/indexView.php");

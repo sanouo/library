@@ -82,8 +82,8 @@
                   <a href="index.php?supprim=<?php echo $value->getId();?>"><i class="material-icons">delete</i></a>
                   <a href="detail.php?id=<?php echo $value->getId();?>">detail</a>
 
-                  <a href="update.php?id=<?php echo $value->getId();?>">test</a>
-                  
+                  <a href="update.php?id=<?php echo $value->getId();?>">take</a>
+
                   </div>
                 </div>
         </div>
