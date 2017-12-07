@@ -12,6 +12,10 @@
        <option value="no">no</option>
      </select>
    </div>
+  
+
+   <p class="card-text"><?php echo $update->getId(); ?></p>
+
 
     <input type="hidden" class="form-control" id="formGroupExampleInput1" name="id"  value= '<?php echo $update->getId()?>' placeholder="">
 
